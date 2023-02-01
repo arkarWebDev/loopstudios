@@ -566,12 +566,32 @@ h5 {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .top-48 {
   top: 12rem;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .mx-auto {
@@ -605,6 +625,10 @@ h5 {
   margin-bottom: 2rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -623,6 +647,11 @@ h5 {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.max-h-min {
+  max-height: -moz-min-content;
+  max-height: min-content;
 }
 
 .w-full {
@@ -665,6 +694,12 @@ h5 {
   justify-content: space-between;
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -689,12 +724,21 @@ h5 {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .border-2 {
   border-width: 2px;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -716,9 +760,26 @@ h5 {
   padding-bottom: 3rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pr-0 {
@@ -735,6 +796,11 @@ h5 {
 
 .font-sans {
   font-family: Josefin Sans, sans-serif;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -777,6 +843,54 @@ h5 {
 
 body {
   background-color: #0e0e0f;
+}
+
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  transition: all 0.25s;
+  transform: rotate(0);
+}
+
+.hamburger-middle {
+  width: 22px;
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  width: 18px;
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  width: 26px;
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
 .btn {
@@ -862,6 +976,16 @@ body {
     background-image: url("../images/mobile/image-hero.jpg");
     background-position: center;
   }
+}
+
+.hover\:text-pink-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .group:hover .group-hover\:scale-110 {

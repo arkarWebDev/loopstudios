@@ -55,9 +55,30 @@
               ></div>
             </div>
           </div>
-          <!-- @todos hamburger menu -->
+          <!-- hamburger menu -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              id="hamburger"
+              class="z-40 block focus:outline-none md:hidden hamburger"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
         </nav>
-        <!-- @todos mobile menu -->
+        <!-- mobile menu -->
+        <div
+          id="menu"
+          class="hidden absolute top-0 bottom-0 left-0 w-full bg-black max-h-min flex-col self-end pl-12 py-1 pt-40 pb-4 space-y-3 text-white text-lg flex"
+        >
+          <a href="#" class="hover:text-pink-500">About</a>
+          <a href="#" class="hover:text-pink-500">Careers</a>
+          <a href="#" class="hover:text-pink-500">Events</a>
+          <a href="#" class="hover:text-pink-500">Products</a>
+          <a href="#" class="hover:text-pink-500">Support</a>
+        </div>
         <div
           class="max-w-lg my-32 p-4 font-sans text-white text-4xl border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl uppercase"
         >
@@ -375,5 +396,6 @@
         </div>
       </div>
     </footer>
+    <script src="./dist/app.js"></script>
   </body>
 </html>
